@@ -40,6 +40,7 @@ export class StarRatingComponent implements OnInit {
   rated: EventEmitter<number> = new EventEmitter();
 
   ngOnInit(): void {
+    this.stars = [];
     for(let i = 0; i < this.maxRating; i++) {
       this.stars.push( {rating: i+1} )
     }
