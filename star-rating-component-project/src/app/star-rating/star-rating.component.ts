@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './star-rating.component.css'
 })
 export class StarRatingComponent {
-
+  
 }
