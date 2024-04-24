@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './star-rating.component.html',
-  styleUrl: './star-rating.component.css'
+  styleUrl: './star-rating.component.scss'
 })
-export class StarRatingComponent {
-  
+export class StarRatingComponent  {
+
 }

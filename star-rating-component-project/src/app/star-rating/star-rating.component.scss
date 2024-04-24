@@ -1,0 +1,19 @@
+$spacing: 4px;
+
+.star {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin-inline-end: $spacing;
+    &:last-child {
+        margin-inline-end: 0px;
+    }
+
+    &.disabled {
+        cursor: default;
+    }
+
+    &:focus {
+        outline: 2px solid #51A4EE;
+    }
+}
