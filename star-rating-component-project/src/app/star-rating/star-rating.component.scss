@@ -1,8 +1,13 @@
 $spacing: 4px;
 
 .star {
+    cursor: pointer;
     margin-inline-end: $spacing;
     &:last-child {
         margin-inline-end: 0px;
+    }
+
+    &.disabled {
+        cursor: default;
     }
 }

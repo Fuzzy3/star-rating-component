@@ -2,6 +2,7 @@
     <img
         [src]="'/assets/' + getImage(star.rating)"
         class="star"
-        (click)="rate(star.rating)"
+        [class.disabled]="disabled"
+        (click)="disabled ? false : rate(star.rating)"
     />
 }

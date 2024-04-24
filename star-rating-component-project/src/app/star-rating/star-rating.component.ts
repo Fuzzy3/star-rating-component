@@ -42,6 +42,6 @@ export class StarRatingComponent implements OnInit {
   getImage(rating: number) {
     const isBold = rating <= this.currentRating;
     const imgName = isBold ? 'star-bold.svg' : 'star.svg';
-    return imgName;
+    return this.disabled ? 'disabled-' + imgName : imgName;
   }
 }
