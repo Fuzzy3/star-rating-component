@@ -5,5 +5,6 @@
         [class.disabled]="disabled"
         (click)="disabled ? false : rate(star.rating)"
         [tabindex]="disabled ? -1 : 1"
+        (keydown.enter)="rate(star.rating)"
     />
 }
