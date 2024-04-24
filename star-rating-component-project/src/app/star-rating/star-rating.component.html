@@ -1,1 +1,6 @@
-<p>star-rating works!</p>
+@for (star of stars; track star.rating) {
+    <img
+        [src]="'/assets/' + getImage(star.rating)"
+        class="star"
+    />
+}
