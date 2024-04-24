@@ -2,7 +2,6 @@ import { Component, Injector } from '@angular/core';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { NgElementConstructor, createCustomElement } from '@angular/elements';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,9 +10,6 @@ import { NgElementConstructor, createCustomElement } from '@angular/elements';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-
-  rating: number = 1;
-
   constructor(
     injector: Injector,
   ) {
@@ -22,6 +18,6 @@ export class AppComponent {
   }
 
   rated(rating: number) {
-    this.rating = rating;
+    console.log(rating);
   }
 }
