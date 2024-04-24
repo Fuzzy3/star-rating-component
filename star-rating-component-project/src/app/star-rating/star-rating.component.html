@@ -4,5 +4,6 @@
         class="star"
         [class.disabled]="disabled"
         (click)="disabled ? false : rate(star.rating)"
+        [tabindex]="disabled ? -1 : 1"
     />
 }

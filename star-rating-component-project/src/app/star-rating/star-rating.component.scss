@@ -10,4 +10,8 @@ $spacing: 4px;
     &.disabled {
         cursor: default;
     }
+
+    &:focus {
+        outline: 2px solid #51A4EE;
+    }
 }
