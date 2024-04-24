@@ -15,8 +15,20 @@ export class StarRatingComponent implements OnInit {
 
   stars: StarModel[] = [];
 
+  _maxRating: number = 5;
+
   @Input()
-  maxRating: number = 5;
+  set maxRating(rating: number) {
+    this._maxRating = rating;
+    this.stars = [];
+    for(let i = 0; i < rating; i++) {
+      this.stars.push( {rating: i+1} )
+    }
+  }
+
+  get maxRating(): number {
+    return this._maxRating;
+  }
 
   @Input()
   disabled: boolean = false;
