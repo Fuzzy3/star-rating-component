@@ -34,4 +34,29 @@ describe('StarRatingComponent', () => {
     const stars = fixture.debugElement.queryAll(By.css('.star'));
     expect(stars.length).toBe(7);
   })
+
+  it('should have 3 stars bold when rating is 3', () => {
+    component.currentRating = 3;
+    fixture.detectChanges();
+    const stars = fixture.debugElement.queryAll(By.css('.star'));
+    expect(stars.filter(star => star.attributes['src']?.includes('bold')).length).toBe(3);
+  })
+
+  it('should have disabled stars when disabled', () => {
+    component.disabled = true;
+    fixture.detectChanges();
+    const disabledStars = fixture.debugElement.queryAll(By.css('.disabled'));
+    expect(disabledStars.length).toBe(5);
+  })
+
+  it('should emit rating on click', () => {
+    spyOn(component.rated, 'emit');
+
+    const nativeElement = fixture.nativeElement;
+    const stars = nativeElement.querySelectorAll('.star');
+    stars[3].dispatchEvent(new Event('click'))
+    fixture.detectChanges();
+
+    expect(component.rated.emit).toHaveBeenCalledWith(4);
+  })
 });
