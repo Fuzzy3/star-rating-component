@@ -1,6 +1,8 @@
 $spacing: 4px;
 
 .star {
+    width: 1.5rem;
+    height: 1.5rem;
     cursor: pointer;
     margin-inline-end: $spacing;
     &:last-child {
