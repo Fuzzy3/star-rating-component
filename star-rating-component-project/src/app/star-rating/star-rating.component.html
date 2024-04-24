@@ -2,5 +2,6 @@
     <img
         [src]="'/assets/' + getImage(star.rating)"
         class="star"
+        (click)="rate(star.rating)"
     />
 }

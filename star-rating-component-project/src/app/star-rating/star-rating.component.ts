@@ -33,6 +33,11 @@ export class StarRatingComponent implements OnInit {
     }
   }
 
+  rate(rating: number) {
+    this.currentRating = rating === this.currentRating ? 0 : rating;
+    this.rated.emit(this.currentRating);
+  }
+
   //Bad performance - fix this later so its not called from template
   getImage(rating: number) {
     const isBold = rating <= this.currentRating;
